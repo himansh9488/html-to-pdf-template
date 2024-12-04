@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- STYLE -->
+
+<head>
+    <style>
+        .floatedChilds::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        @font-face {
+            font-family: light;
+            src: url('https://bharatpe-cdn.s3.ap-south-1.amazonaws.com/ITCAvantGardePro-Bk.woff');
+        }
+
+        @font-face {
+            font-family: heavy;
+            src: url('https://bharatpe-cdn.s3.ap-south-1.amazonaws.com/ITCAvantGardePro-Demi.otf');
+        }
+
+        @page {
+            margin: 0px;
+            size: 894px 1194px portrait;
+            padding: 0px;
+        }
+
+        .pos-rel {
+            position: relative;
+        }
+
+        .z-index-1 {
+            z-index: 1;
+        }
+
+        .pos-abs {
+            position: absolute;
+        }
+
+        .balance_box {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .symbol_box {
+            height: 20px;
+            width: 20px;
+            font-size: 16px;
+            border-radius: 100%;
+            background-color: #2b80ff;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            margin: 0px;
+        }
+
+        .balance_subbox {
+            flex: 1 1 auto;
+        }
+
+        .table_col_class {
+            padding: 12px 8px;
+        }
+
+        .font-heavy {
+            font-family: heavy;
+        }
+
+        .table_bottom_border {
+            border-bottom: 1px solid #f4f9ff;
+        }
+    </style>
+</head>
+<!-- HEADER -->
+
+<body style='margin: 0px; padding: 0px; font-family: Helvetica; font-size: 14px; color: #1c1c1c; font-family: light;'>
+    <div style='padding: 10px 24px; background-color: #f4f9ff;' class='floatedChilds'>
+        <img src='https://bharatpe-cdn.s3.ap-south-1.amazonaws.com/bp-logo.png' height='50px' width='180px'
+            style='float: left; margin-top: 10px;' />
+        <img src='https://d30gqtvesfc1d5.cloudfront.net/bp-account/liquiloans-logo.png' height='50px' width='50px'
+            style='float: right; margin-top: 10px;' />
+    </div>;
+    <!-- NAME -->
+    <div style="margin: 0px 24px;">
+        <div style='clear: both; float: left; margin: 24px 0px 0px 0px;' class="floatedChilds">
+            <h4 style="margin: 0; font-family: heavy;">Dear ROHIT CHHABRA,</h4>
+        </div>
+        <!-- PAN_MOBILE_ROW -->
+        <div style="clear: both; margin: 12px 0px;" class="floatedChilds">
+            <div style="float: left; font-family: light;">
+                <p style="margin: 0; margin-top: 12px;">PAN</p>
+            </div>
+            <div style="float: left; font-family: light;">
+                <p style="margin: 0; margin-left: 4px; margin-top: 12px;">:<span
+                        style="font-family: heavy; margin: 0px 4px;">AYZPC0987F</span></p>
+            </div>
+            <div style="float: right; font-family: light;">
+                <p style="margin: 0; margin-top: 12px; margin-left: 4px;">:<span
+                        style="font-family: heavy; margin: 0px 4px;">8950170009</span></p>
+            </div>
+            <div style="float: right; font-family: light;">
+                <p style="margin: 0; margin-top: 12px;">Mobile Number</p>
+            </div>
+        </div>
+        <!-- INVESTOR_ID_ROW -->
+        <div style="clear: both; margin: 0px 0px 12px 0px;" class="floatedChilds">
+            <div style="float: left; font-family: light;">
+                <p style="margin: 0;"> LiquiLoans</p>
+            </div>
+            <div style="float: left; font-family: light;">
+                <p style="margin: 0; margin-left: 4px;">:<span
+                        style="font-family: heavy; margin: 0px 4px;">3038803</span></p>
+            </div>
+        </div>
+        <!-- INVESTMENT -->
+        <div style="clear: both; margin: 12px 0px; box-sizing: border-box; width: 60%;" class="floatedChilds pos-rel">
+            <div style="border-radius: 8px; background-color: #f4f9ff; padding: 16px; box-sizing: border-box; font-family: light; font-family: regular; display: flex; flex-direction: row; align-items: center;"
+                class="floatedChilds">
+                <div class="symbol_box">&#8377;</div>
+                <p style="margin: 0px 0px 0px 8px; font-family: light; font-size: 16px;">Principal Invested with
+                    LiquiLoans</p>
+                <p style="margin: 0px 0px 0px 22px; font-family: heavy; font-size: 18px; color: #2b80ff;">
+                    <span style='font-family: heavy; font-weight: bold;'>₹13,113.52</span>
+                </p>
+            </div>
+        </div>
+        <!-- TABLE_HEADER -->
+        <table
+            style="clear: both; margin: 16px 0px 35px 0px; width: 100%; box-sizing: border-box; font-family: light; border-spacing: 0; font-size: 12px;">
+            <thead>
+                <tr
+                    style="color: white; font-family: heavy; background-color: #2b80ff; color: #ffffff; font-size: 18px;">
+                    <th colspan="9"
+                        style="padding: 12px; border-top-left-radius: 8px; border-top-right-radius: 8px; text-align: left;">
+                        Portfolio Statement</th>
+                </tr>
+            </thead>
+            <!-- TABLE_COLUMNS -->
+            <tbody>
+                <tr style="background-color: #f4f9ff;" class="table_row_border">
+                    <td style="width: 5%; border-right: 1px solid #ffffff;" class="table_col_class font-heavy">S.No.
+                    </td>
+                    <td style="width: 15%; border-right: 1px solid #ffffff;" class="table_col_class font-heavy">Borrower
+                        Name</td>
+                    <td style="width: 10%; border-right: 1px solid #ffffff;" class="table_col_class font-heavy">Credit
+                        Score<sup>*</sup></td>
+                    <td style="width: 10%; border-right: 1px solid #ffffff;" class="table_col_class font-heavy">Loan ID
+                    </td>
+                    <td style="width: 15%; border-right: 1px solid #ffffff;" class="table_col_class font-heavy">Invested
+                        Amount
+                        (INR)</td>
+                    <td style="width: 15%; border-right: 1px solid #ffffff;" class="table_col_class font-heavy">Total
+                        Loan Amount
+                        (INR)</td>
+                    <td style="width: 15%; border-right: 1px solid #ffffff;" class="table_col_class font-heavy">Loan
+                        Interest Rate
+                        (Monthly)</td>
+                    <td style="width: 7.5%; border-right: 1px solid #ffffff;" class="table_col_class font-heavy">Max ROI
+                        (Monthly)<sup>**</sup></td>
+                    <td style="width: 7.5%;" class="table_col_class font-heavy">Tenure (Months)</td>
+                </tr>
+                <!-- TABLE_ROW -->
+                <tr class="table_row_border" style="background-color: #fbfbfd;">
+                    <td style="width: 5%; border-right: 1px solid #f4f9ff; border-left: 1px solid #f4f9ff; font-size: heavy;"
+                        class="table_col_class"><span>1.</span></td>
+                    <td style="width: 15%; border-right: 1px solid #f4f9ff;" class="table_col_class">Pushpa Aggarwal
+                    </td>
+                    <td style="width: 10%; border-right: 1px solid #f4f9ff;" class="table_col_class">New to credit
+                    </td>
+                    <td style="width: 10%; border-right: 1px solid #f4f9ff;" class="table_col_class">6832947</td>
+                    <td style="width: 15%; border-right: 1px solid #f4f9ff;" class="table_col_class">147.63
+                    </td>
+                    <td style="width: 15%; border-right: 1px solid #f4f9ff;" class="table_col_class">3,08,850.00</td>
+                    <td style="width: 15%; border-right: 1px solid #f4f9ff;" class="table_col_class">2.09%</td>
+                    <td style="width: 7.5%; border-right: 1px solid #f4f9ff;" class="table_col_class">1%</td>
+                    <td style="width: 7.5%; border-right: 1px solid #f4f9ff;" class="table_col_class">2</td>
+                </tr>
+                <!-- TABLE_ROW -->
+                <tr class="table_row_border" ${even_row_background}>
+                    <td style="width: 5%; border-right: 1px solid #f4f9ff; border-left: 1px solid #f4f9ff; font-size: heavy;"
+                        class="table_col_class"><span>2.</span></td>
+                    <td style="width: 15%; border-right: 1px solid #f4f9ff;" class="table_col_class">NISHIKANT
+                    </td>
+                    <td style="width: 10%; border-right: 1px solid #f4f9ff;" class="table_col_class">New to credit
+                    </td>
+                    <td style="width: 10%; border-right: 1px solid #f4f9ff;" class="table_col_class">6832948</td>
+                    <td style="width: 15%; border-right: 1px solid #f4f9ff;" class="table_col_class">107.63
+                    </td>
+                    <td style="width: 15%; border-right: 1px solid #f4f9ff;" class="table_col_class">1,08,90.00</td>
+                    <td style="width: 15%; border-right: 1px solid #f4f9ff;" class="table_col_class">6.54%</td>
+                    <td style="width: 7.5%; border-right: 1px solid #f4f9ff;" class="table_col_class">1%</td>
+                    <td style="width: 7.5%; border-right: 1px solid #f4f9ff;" class="table_col_class">1</td>
+                </tr>
+                <!-- ROW_UNALLOCATED -->
+                <tr class="table_row_border" ${even_row_background}>
+                    <td style="width: 5%; border-right: 1px solid #f4f9ff; border-left: 1px solid #f4f9ff; border-bottom-left-radius: 8px;"
+                        class="table_col_class table_bottom_border"></td>
+                    <td style="width: 15%; border-right: 1px solid #f4f9ff;"
+                        class="table_col_class table_bottom_border">#Unallocated
+                        Funds (INR)</td>
+                    <td style="width: 10%; border-right: 1px solid #f4f9ff;"
+                        class="table_col_class table_bottom_border">
+                    <td style="width: 10%; border-right: 1px solid #f4f9ff;"
+                        class="table_col_class table_bottom_border"></td>
+                    <td style="width: 15%; border-right: 1px solid #f4f9ff;"
+                        class="table_col_class table_bottom_border">
+                        0.00 </td>
+                    <td style="width: 15%; border-right: 1px solid #f4f9ff;"
+                        class="table_col_class table_bottom_border"></td>
+                    <td style="width: 15%; border-right: 1px solid #f4f9ff;"
+                        class="table_col_class table_bottom_border"></td>
+                    <td style="width: 7.5%; border-right: 1px solid #f4f9ff;"
+                        class="table_col_class table_bottom_border"></td>
+                    <td style="width: 7.5%; border-right: 1px solid #f4f9ff; border-bottom-right-radius: 8px;"
+                        class="table_col_class table_bottom_border"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- FOOTER -->
+    <div style="clear: both; position: absolute; bottom: 0; font-family: light; width: 100%;">
+        <div
+            style="background-color: #f4f9ff; padding: 12px 24px; width: 100%; margin-top: 12px; box-sizing: border-box;">
+            <p style="margin: 0;"><sup>*</sup> The credit score is based on various risk-based parameters evaluated and
+                arrived at by the NBFC P2P.</p>
+            <p style="margin: 8px 0px 0px 0px;"><sup>**</sup> The actual rate of interest on the invested amount may
+                vary
+                and is capped at Max ROI (Rate of Interest) mentioned above. The NBFC P2P Platform will charge fees
+                equivalent to the difference between Loan Interest Rate and actual Rate of Interest on the invested
+                amount.
+            </p>
+            <p style="margin: 8px 0px 0px 0px;"># Unallocated funds shall be deployed for investment by NBFC P2P
+                Platform as
+                per the loan requirement of the borrowers on its P2P platform and discretion of the NBFC P2P. Please
+                note
+                that unallocated funds will not earn any interest till the time they are invested.</p>
+        </div>
+        <div style="width: 100%; background-color: #ec6a5a; height: 4.5px;"></div>
+        <div style="width: 100%; background-color: #ffffff; height: 4.5px;"></div>
+        <div style="width: 100%; background-color: #007270; height: 4.5px;"></div>
+    </div>
+</body>
+
+</html>
