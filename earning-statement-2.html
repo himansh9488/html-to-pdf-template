@@ -125,6 +125,73 @@
             </div>
         </div>
     </div>
+    <!-- TABLE_HEADER -->
+    <table
+        style="clear: both; margin: 16px 24px 55px 24px; width: 100%; box-sizing: border-box; font-family: light; border-spacing: 0;">
+        <thead>
+            <tr style="color: white; font-family: heavy; background-color: #2b80ff; color: #ffffff; font-size: 18px;">
+                <th colspan="6" style="padding: 12px; border-top-left-radius: 8px; border-top-right-radius: 8px;">
+                    ${table_header_text} Details</th>
+            </tr>
+        </thead>
+        <!-- P2P_TABLE_COLUMNS  -->
+        <tbody>
+            <tr style="background-color: #f4f9ff;" class="table_row_border">
+                <td style="width: 10%; border-right: 1px solid #ffffff;" class="table_col_class font-heavy">Date</td>
+                <td style="width: 19%; border-right: 1px solid #ffffff;" class="table_col_class font-heavy">Type</td>
+                <td style="width: 17%; border-right: 1px solid #ffffff;" class="table_col_class font-heavy">Investment
+                </td>
+                <td style="width: 13%; border-right: 1px solid #ffffff;" class="table_col_class font-heavy">Daily
+                    earning*
+                </td>
+                <td style="width: 13%; border-right: 1px solid #ffffff;" class="table_col_class font-heavy">Cashback**
+                </td>
+                <td style="width: 15%; border-right: 1px solid #ffffff;" class="table_col_class font-heavy">Total</td>
+            </tr>
+            <!-- P2P_TABLE_ROW -->
+            <tr class="table_row_border" ${even_row_background}>
+                <td style="width: 10%; border-right: 1px solid #f4f9ff; border-left: 1px solid #f4f9ff; font-family: light;"
+                    class="table_col_class">${date}
+                </td>
+                <td style="width: 19%; border-right: 1px solid #f4f9ff; font-family: light;" class="table_col_class">
+                    ${transaction_type}
+                </td>
+                <td style="width: 17%; border-right: 1px solid #f4f9ff; font-family: light;" class="table_col_class">
+                    ${principal}
+                </td>
+                <td style="width: 13%; border-right: 1px solid #f4f9ff; font-family: light;" class="table_col_class">
+                    <span>${nbfc_interest}</span>
+                </td>
+                <td style="width: 13%; border-right: 1px solid #f4f9ff; font-family: light;" class="table_col_class">
+                    <span>${cashback}</span>
+                </td>
+                <td style="width: 15%; border-right: 1px solid #f4f9ff; font-family: light;" class="table_col_class">
+                    <span>${interest}</span>
+                </td>
+            </tr>
+            <!-- P2P_LAST_ROW -->
+            <tr class="table_row_border" ${even_row_background}>
+                <td style="width: 10%; border-right: 1px solid #f4f9ff; border-left: 1px solid #f4f9ff; border-bottom-left-radius: 8px; font-family: light;"
+                    class="table_col_class table_bottom_border">${date}
+                </td>
+                <td style="width: 19%; border-right: 1px solid #f4f9ff; font-family: light;"
+                    class="table_col_class table_bottom_border">${transaction_type}
+                </td>
+                <td style="width: 17%; border-right: 1px solid #f4f9ff; font-family: light;"
+                    class="table_col_class table_bottom_border">${principal}
+                </td>
+                <td style="width: 13%; border-right: 1px solid #f4f9ff; font-family: light;"
+                    class="table_col_class table_bottom_border"><span>${nbfc_interest}</span>
+                </td>
+                <td style="width: 13%; border-right: 1px solid #f4f9ff; font-family: light; border-bottom-right-radius: 8px;"
+                    class="table_col_class table_bottom_border"><span>${cashback}</span>
+                <td style="width: 15%; border-right: 1px solid #f4f9ff; font-family: light;"
+                    class="table_col_class table_bottom_border"><span>${interest}</span>
+                </td>
+                <!-- TABLE_END -->
+        </tbody>
+    </table>
+    </div>
     <!-- COMPUTER_GENERATED no changes required -->
     <p style="margin: -24px 0px 12px 48px; font-family: light;">
         This is a computer-generated statement and does not require a signature.
