@@ -81,14 +81,15 @@
 <!-- HEADER no changes required -->
 
 <body style='margin: 0px; padding: 0px; font-family: Helvetica; font-size: 12px; color: #1c1c1c; font-family: light;'>
-    <div style='padding: 20px 24px; background-color: #f4f9ff;' class='floatedChilds'><img
-            src='https://bharatpe-cdn.s3.ap-south-1.amazonaws.com/bp-logo.png' height='50px' width='180px'
+    <div style='padding: 20px 24px; background-color: #f4f9ff;' class='floatedChilds'>
+        <img src='https://bharatpe-cdn.s3.ap-south-1.amazonaws.com/bp-logo.png' height='50px' width='180px'
             style='float: left; margin-top: 10px;' />
         <div style='float: right; font-family: light;'>
             <h3 style='color: #2b80ff; margin: 3px; font-family: heavy;'>Need help?</h3>
             <p style='margin: 5px;'>Visit <span style='font-family: heavy;'>24x7 Chat Support</span></p>
             <p style='margin: 5px;'>in your <span style='font-family: heavy;'>BharatPe App</span></p>
-        </div><img src="https://bharatpe-cdn.s3.ap-south-1.amazonaws.com/support_icon.png" height="24" width="24"
+        </div>
+        <img src="https://bharatpe-cdn.s3.ap-south-1.amazonaws.com/support_icon.png" height="24" width="24"
             style="margin: 10 12px 18px 0; float: right;" />
     </div>
     <!-- STATEMENT_PERIOD no changes required -->
@@ -185,67 +186,96 @@
             <thead>
                 <tr style="color: white; font-family: heavy; background-color: #2b80ff; color: #ffffff; font-size: 18px;">
                     <th colspan="6" style="padding: 12px; border-top-left-radius: 8px; border-top-right-radius: 8px;">
-                        ${table_header_text} Details</th>
+                        ${table_header_text} Details
+                    </th>
                 </tr>
             </thead>
             <!-- TABLE_COLUMNS -->
             <tbody>
                 <tr style="background-color: #f4f9ff;" class="table_row_border">
-                    <td style="width: 10%; border-right: 1px solid #ffffff;" class="table_col_class font-heavy">Date</td>
-                    <td style="width: 21%; border-right: 1px solid #ffffff;" class="table_col_class font-heavy">Transaction Type
+                    <td style="width: 10%; border-right: 1px solid #ffffff;" class="table_col_class font-heavy">
+                        Date
                     </td>
-                    <td style="width: 30%; border-right: 1px solid #ffffff;" class="table_col_class font-heavy">Particulars</td>
-                    <td style="width: 13%; border-right: 1px solid #ffffff;" class="table_col_class font-heavy">Deposit</td>
-                    <td style="width: 13%; border-right: 1px solid #ffffff;" class="table_col_class font-heavy">Withdrawal</td>
-                    <td style="width: 13%;" class="table_col_class font-heavy">Balance</td>
+                    <td style="width: 21%; border-right: 1px solid #ffffff;" class="table_col_class font-heavy">
+                        Transaction Type
+                    </td>
+                    <td style="width: 30%; border-right: 1px solid #ffffff;" class="table_col_class font-heavy">
+                        Particulars
+                    </td>
+                    <td style="width: 13%; border-right: 1px solid #ffffff;" class="table_col_class font-heavy">
+                        Deposit
+                    </td>
+                    <td style="width: 13%; border-right: 1px solid #ffffff;" class="table_col_class font-heavy">
+                        Withdrawal
+                    </td>
+                    <td style="width: 13%;" class="table_col_class font-heavy">
+                        Balance
+                    </td>
                 </tr>
                 <!-- FIRST_ROW -->
                 <tr class="table_row_border" ${even_row_background}>
                     <td style="width: 10%; border-right: 1px solid #f4f9ff; border-left: 1px solid #f4f9ff; font-family: heavy;"
-                        class="table_col_class">${date}</td>
-                    <td style="width: 21%; border-right: 1px solid #f4f9ff; font-family: heavy;" class="table_col_class">Opening Balance
+                        class="table_col_class">${date}
+                    </td>
+                    <td style="width: 21%; border-right: 1px solid #f4f9ff; font-family: heavy;" class="table_col_class">
+                        Opening Balance
                     </td>
                     <td style="width: 30%; border-right: 1px solid #f4f9ff; font-family: heavy;" class="table_col_class"></td>
                     <td style="width: 13%; border-right: 1px solid #f4f9ff; font-family: light;" class="table_col_class"></td>
                     <td style="width: 13%; border-right: 1px solid #f4f9ff; font-family: light;" class="table_col_class"></td>
                     <td style="width: 13%; border-right: 1px solid #f4f9ff; font-family: heavy;" class="table_col_class">
-                        &#8377;<span>${balance}</span></td>
+                        &#8377;<span>${balance}</span>
+                    </td>
                 </tr>
                 <!-- TABLE_ROW -->
                 <tr class="table_row_border" ${even_row_background}>
                     <td style="width: 10%; border-right: 1px solid #f4f9ff; border-left: 1px solid #f4f9ff; font-family: light;"
-                        class="table_col_class">${date}</td>
+                        class="table_col_class">${date}
+                    </td>
                     <td style="width: 21%; border-right: 1px solid #f4f9ff; font-family: light;" class="table_col_class">
-                        ${transaction_type}</td>
-                    <td style="width: 30%; border-right: 1px solid #f4f9ff; font-family: light;" class="table_col_class">${particulars}
+                        ${transaction_type}
+                    </td>
+                    <td style="width: 30%; border-right: 1px solid #f4f9ff; font-family: light;" class="table_col_class">
+                        ${particulars}
                     </td>
                     <td style="width: 13%; border-right: 1px solid #f4f9ff; font-family: light;" class="table_col_class">
-                        <span>${deposit}</span></td>
+                        <span>${deposit}</span>
+                    </td>
                     <td style="width: 13%; border-right: 1px solid #f4f9ff; font-family: light;" class="table_col_class">
-                        <span>${withDrawl}</span></td>
+                        <span>${withDrawl}</span>
+                    </td>
                     <td style="width: 13%; border-right: 1px solid #f4f9ff; font-family: light;" class="table_col_class">
-                        &#8377;<span>${balance}</span></td>
+                        &#8377;<span>${balance}</span>
+                    </td>
                 </tr>
                 <!-- LAST_ROW -->
                 <tr class="table_row_border" ${even_row_background}>
                     <td style="width: 10%; border-right: 1px solid #f4f9ff; border-left: 1px solid #f4f9ff; border-bottom-left-radius: 8px; font-family: light;"
-                        class="table_col_class table_bottom_border">${date}</td>
+                        class="table_col_class table_bottom_border">${date}
+                    </td>
                     <td style="width: 21%; border-right: 1px solid #f4f9ff; font-family: light;"
-                        class="table_col_class table_bottom_border">${transaction_type}</td>
+                        class="table_col_class table_bottom_border">${transaction_type}
+                    </td>
                     <td style="width: 30%; border-right: 1px solid #f4f9ff; font-family: light;"
-                        class="table_col_class table_bottom_border">${particulars}</td>
+                        class="table_col_class table_bottom_border">${particulars}
+                    </td>
                     <td style="width: 13%; border-right: 1px solid #f4f9ff; font-family: light;"
-                        class="table_col_class table_bottom_border"><span>${deposit}</span></td>
+                        class="table_col_class table_bottom_border"><span>${deposit}</span>
+                    </td>
                     <td style="width: 13%; border-right: 1px solid #f4f9ff; font-family: light;"
-                        class="table_col_class table_bottom_border"><span>${withDrawl}</span></td>
+                        class="table_col_class table_bottom_border"><span>${withDrawl}</span>
+                    </td>
                     <td style="width: 13%; border-right: 1px solid #f4f9ff; font-family: light; border-bottom-right-radius: 8px;"
-                        class="table_col_class table_bottom_border">&#8377;<span>${balance}</span></td>
+                        class="table_col_class table_bottom_border">&#8377;<span>${balance}</span>
+                    </td>
                 <!-- CLOSING_BALANCE_ROW -->
                 <tr class="table_row_border" ${even_row_background}>
                     <td style="width: 10%; border-right: 1px solid #f4f9ff; border-left: 1px solid #f4f9ff; border-bottom-left-radius: 8px; font-family: heavy;"
-                        class="table_col_class table_bottom_border">${date}</td>
+                        class="table_col_class table_bottom_border">${date}
+                    </td>
                     <td style="width: 21%; border-right: 1px solid #f4f9ff; font-family: heavy;"
-                        class="table_col_class table_bottom_border">Closing Balance</td>
+                        class="table_col_class table_bottom_border">Closing Balance
+                    </td>
                     <td style="width: 30%; border-right: 1px solid #f4f9ff; font-family: heavy;"
                         class="table_col_class table_bottom_border"></td>
                     <td style="width: 13%; border-right: 1px solid #f4f9ff; font-family: light;"
@@ -253,7 +283,8 @@
                     <td style="width: 13%; border-right: 1px solid #f4f9ff; font-family: light;"
                         class="table_col_class table_bottom_border"></td>
                     <td style="width: 13%; border-right: 1px solid #f4f9ff; font-family: heavy; border-bottom-right-radius: 8px;"
-                        class="table_col_class table_bottom_border">&#8377;<span>${balance}</span></td>
+                        class="table_col_class table_bottom_border">&#8377;<span>${balance}</span>
+                    </td>
                 <!-- TABLE_END -->
             </tbody>
         </table>
