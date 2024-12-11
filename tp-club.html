@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statement</title>
+    <style>
+        .floatedChilds::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        @font-face {
+            font-family: light;
+            src: url('https://d30gqtvesfc1d5.cloudfront.net/hubble/tp-club/ITCAvantGardePro-Bk-1733745575601.ttf');
+        }
+
+        @font-face {
+            font-family: heavy;
+            src: url('https://d30gqtvesfc1d5.cloudfront.net/hubble/tp-club/ITCAvantGardePro-Demi-1733745601597.ttf');
+        }
+
+        @page {
+            margin: 0px;
+            size: 894px 1194px portrait;
+            padding: 0px;
+        }
+
+        .pos-rel {
+            position: relative;
+        }
+
+        .z-index-1 {
+            z-index: 1;
+        }
+
+        .pos-abs {
+            position: absolute;
+        }
+
+        .balance_box {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .symbol_box {
+            height: 16px;
+            max-width: 16px;
+            font-size: 16px;
+            border-radius: 100%;
+            background-color: #035857;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            margin: 4px 8px 0px 8px;
+        }
+
+        .balance_subbox {
+            flex: 1 1 auto;
+        }
+
+        .table_col_class {
+            padding: 12px 8px;
+        }
+
+        .font-heavy {
+            font-family: heavy;
+        }
+
+        .table_bottom_border {
+            border-bottom: 1px solid #e6eeef;
+        }
+    </style>
+</head>
+
+<body style='margin: 0px; padding: 0px; font-size: 14px; color: #1c1c1c; font-family: light;'>
+    <div style='padding: 10px 24px; background-color: #e6eeef;' class='floatedChilds'>
+        <img src='https://d30gqtvesfc1d5.cloudfront.net/tp-club/images/logo.png' height='50px' width='180px'
+            style='float: left; margin-top: 10px;' />
+        <!--    <div style='float: right; font-family: light;'>-->
+        <!--        <h3 style='color: #035857; margin: 3px; font-family: heavy;'>Need help?</h3>-->
+        <!--        <p style='margin: 5px;'>Visit <span style='font-family: heavy;'>24x7 Chat Support</span>-->
+        <!--        </p>-->
+        <!--        <p style='margin: 5px;'>in your <span style='font-family: heavy;'>12% Club App</span></p>-->
+        <!--    </div>-->
+    </div>
+    <div style="margin: 0px 24px;">
+        <div style="clear: both; text-align: center; margin: 24px 0px;" class="floatedChilds">
+            <h3 style="font-weight: 900; font-size: 20px; margin: 0px; font-family: heavy;">Your 12%
+                Club Account Statement</h3>
+            <p style="font-weight: 900; font-size: 18px; margin: 0px; font-family: light; margin-top: 2px;">
+                (for the period ${start_date} – ${end_date})</p>
+        </div>
+        <div style='clear: both; float: left; margin: 0px 0px;'>
+            <h4 style="margin: 0; font-family: heavy;">Dear ${bene_name},</h4>
+        </div>
+        <div style="clear: both; margin: 12px 0px;" class="floatedChilds">
+            <div style="float: left; font-family: light;">
+                <p>PAN Number</p>
+            </div>
+            <div style="float: left; font-family: light;">
+                <p style="margin-left: 4px;">:<span style="font-family: heavy; margin: 0px 4px;">${pan_no}</span>
+                </p>
+            </div>
+            <div style="float: right; font-family: light;">
+                <p style="margin-top: 12px; margin-left: 4px;">:<span
+                        style="font-family: heavy; margin: 0px 4px;">${mobile_no}</span></p>
+            </div>
+            <div style="float: right; font-family: light;">
+                <p>Mobile Number</p>
+            </div>
+        </div>
+        <div style="clear: both; margin: 12px 0px; width: 100%; box-sizing: border-box; padding-top: 26px;"
+            class="floatedChilds pos-rel">
+            <div style="border-radius: 8px; background-color: #e6eeef; padding: 47px 16px 24px 16px; width: 100%; box-sizing: border-box; font-family: light;"
+                class="floatedChilds">
+                <div class="balance_box">
+                    <div style="text-align: center;" class="balance_subbox">
+                        <p style="font-size: 16; font-family: heavy; margin: 0;">
+                            <b>${opening_balance}</b>
+                        </p>
+                        <p style="margin: 8px 0px 0px 0px; font-family: light; font-size: 12px;">
+                            Opening Balance
+                        </p>
+                    </div>
+                    <div class="symbol_box balance_subbox">
+                        <p style="margin: 0px; margin-top: -1px;">+</p>
+                    </div>
+                    <div style="text-align: center;" class="balance_subbox">
+                        <p style="font-size: 16; font-family: heavy; margin: 0;">
+                            <b>${deposits}</b>
+                        </p>
+                        <p style="margin: 8px 0px 0px 0px; font-family: light; font-size: 12px;">
+                            Credit
+                        </p>
+                    </div>
+                    <div class="symbol_box balance_subbox">
+                        <p style="margin: 0px; margin-top: -1px;">+</p>
+                    </div>
+                    <div style="text-align: center;" class="balance_subbox">
+                        <p style="font-size: 16; font-family: heavy; margin: 0;">
+                            <b>${earnings}</b>
+                        </p>
+                        <p style="margin: 8px 0px 0px 0px; font-family: light; font-size: 12px;">
+                            Earnings
+                        </p>
+                    </div>
+                    <div class="symbol_box balance_subbox">
+                        <p style="margin: 0px; margin-top: -3px;">-</p>
+                    </div>
+                    <div style="text-align: center;" class="balance_subbox">
+                        <p style="font-size: 16; font-family: heavy; margin: 0;">
+                            <b>${withdrawals}</b>
+                        </p>
+                        <p style="margin: 8px 0px 0px 0px; font-family: light; font-size: 12px;">
+                            Debit
+                        </p>
+                    </div>
+                    ${interest_charged_section}
+                    <div class="symbol_box balance_subbox">
+                        <p style="margin: 0px; margin-top: -1px;">=</p>
+                    </div>
+                    <div style="text-align: center;" class="balance_subbox">
+                        <p style="font-size: 16; font-family: heavy; margin: 0; color: #02a758">
+                            <b>${closing_balance}</b>
+                        </p>
+                        <p style="margin: 8px 0px 0px 0px; font-family: light; font-size: 12px;">
+                            Closing Balance
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; top: 0; width: 100%; box-sizing: border-box;" class="pos-abs z-index-1">
+                <div
+                    style="margin: 0px auto; padding: 12px 24px; border-radius: 8px; background-color: #035857; color: #ffffff; font-size: 22px; width: 25%; font-family: heavy;">
+                    Account Summary
+                </div>
+            </div>
+        </div>
+        <table
+            style="clear: both; margin: 16px 0px; width: 100%; box-sizing: border-box; font-family: light; border-spacing: 0;">
+            <thead>
+                <tr
+                    style="color: white; font-family: heavy; background-color: #035857; color: #ffffff; font-size: 18px;">
+                    <th colspan="6" style="padding: 12px; border-top-left-radius: 8px; border-top-right-radius: 8px;">
+                        Transaction Details
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="background-color: #e6eeef;" class="table_row_border">
+                    <td style="width: 20%; border-right: 1px solid #ffffff;" class="table_col_class font-heavy">Date
+                    </td>
+                    <td style="width: 25%; border-right: 1px solid #ffffff;" class="table_col_class font-heavy">
+                        Particulars
+                    </td>
+                    <td style="width: 17%; border-right: 1px solid #ffffff;" class="table_col_class font-heavy">Credit
+                        (Cr.)
+                    </td>
+                    <td style="width: 17%; border-right: 1px solid #ffffff;" class="table_col_class font-heavy">Debit
+                        (Dr.)
+                    </td>
+                    <td style="width: 20%;" class="table_col_class font-heavy">Balance</td>
+                </tr>
+                ${rows}
+            </tbody>
+        </table>
+        <p style="margin: 12px 0px 0px 0px; font-family: light;">This is a computer-generated statement
+            and does not require a signature.</p>
+    </div>
+    <div style="clear: both; position: absolute; bottom: 0; font-family: light; width: 100%;">
+        <div style="display: flex; flex-direction: row; margin: 0px 24px;">
+            <p style="margin: 0px; text-align: left; width: fit-content;" class="balance_subbox">
+                Statement Date: <span class="font-heavy">${st_date}</span>
+            </p>
+            <p style="margin: 0px; text-align: right; width: fit-content;" class="balance_subbox">
+                Page 1 of 1
+            </p>
+        </div>
+        <div
+            style="background-color: #e6eeef; padding: 12px 24px; width: 100%; margin-top: 12px; box-sizing: border-box;">
+            <p style="margin: 0;">12% Club account is powered by <img
+                    src="https://bharatpe-cdn.s3.ap-south-1.amazonaws.com/bp-logo.png" height="16" width="60"
+                    style="margin-bottom: -4px;" /> in partnership with
+                ${deposit_partner_images}
+            </p>
+            <p style="margin: 8px 0px 0px 0px;">This document is confidential and may also be
+                privileged.
+            </p>
+        </div>
+        <div style="width: 100%; background-color: #ec6a5a; height: 4.5px;"></div>
+        <div style="width: 100%; background-color: #ffffff; height: 4.5px;"></div>
+        <div style="width: 100%; background-color: #007270; height: 4.5px;"></div>
+    </div>
+</body>
+
+</html>
