@@ -13,12 +13,12 @@
 
         @font-face {
             font-family: light;
-            src: url('https://bharatpe-cdn.s3.ap-south-1.amazonaws.com/ITCAvantGardePro-Bk.woff');
+            src: url('assets/ITCAvantGardePro-Bk.ttf');
         }
 
         @font-face {
             font-family: heavy;
-            src: url('https://bharatpe-cdn.s3.ap-south-1.amazonaws.com/ITCAvantGardePro-Demi.otf');
+            src: url('assets/ITCAvantGardePro-Demi.ttf');
         }
 
         @page {
@@ -53,11 +53,8 @@
             border-radius: 100%;
             background-color: #2b80ff;
             color: #ffffff;
-            display: flex;
-            align-items: center;
+            line-height: 24px;
             text-align: center;
-            justify-content: center;
-            margin: 0px;
         }
 
         .balance_subbox {
@@ -120,16 +117,20 @@
         </div>
         <!-- INVESTMENT -->
         <div style="clear: both; margin: 12px 0px; box-sizing: border-box; width: 60%;" class="floatedChilds pos-rel">
-            <div style="border-radius: 8px; background-color: #f4f9ff; padding: 16px; box-sizing: border-box; font-family: light; font-family: regular; display: flex; flex-direction: row; align-items: center;"
+            <div style="border-radius: 8px; background-color: #f4f9ff; padding: 16px; box-sizing: border-box; font-family: light; position: relative; overflow: hidden;"
                 class="floatedChilds">
-                <div class="symbol_box">&#8377;</div>
-                <p style="margin: 0px 0px 0px 8px; font-family: light; font-size: 16px;">Principal Invested with
-                    LiquiLoans</p>
-                <p style="margin: 0px 0px 0px 22px; font-family: heavy; font-size: 18px; color: #2b80ff;">
-                    <span style='font-family: heavy; font-weight: bold;'>₹13,113.52</span>
+                <div class="symbol_box" style="float: left;">&#8377;</div>
+                <p style="margin: 2px 0px 0px 8px; font-family: light; font-size: 16px; float: left; line-height: 20px;">
+                    Principal Invested with ${gateway}
                 </p>
+                <p
+                    style="margin: 2px 0px 0px 22px; font-family: heavy; font-size: 18px; color: #2b80ff; float: left; line-height: 20px;">
+                    <span style="font-family: heavy; font-weight: bold;">₹${principal_invested}</span>
+                </p>
+                <div style="clear: both;"></div>
             </div>
         </div>
+            
         <!-- TABLE_HEADER -->
         <table
             style="clear: both; margin: 16px 0px 35px 0px; width: 100%; box-sizing: border-box; font-family: light; border-spacing: 0; font-size: 12px;">
@@ -224,7 +225,7 @@
         </table>
     </div>
     <!-- FOOTER -->
-    <div style="clear: both; position: absolute; bottom: 0; font-family: light; width: 100%;">
+    <div style="clear: both; position: fixed; bottom: 0; font-family: light; width: 100%;">
         <div
             style="background-color: #f4f9ff; padding: 12px 24px; width: 100%; margin-top: 12px; box-sizing: border-box;">
             <p style="margin: 0;"><sup>*</sup> The credit score is based on various risk-based parameters evaluated and

@@ -124,21 +124,22 @@
                 <p>Statement Date</p>
             </div>
         </div>
-        <!-- NO_TRANSACTION_FOUND no changes required -->
-        <p style='margin: 24px; font-family: heavy;'>
-            No transactions found between ${start_date} and ${end_date}
-        </p>
-        <!-- COMPUTER_GENERATED no changes required -->
-        <p style="margin: -24px 0px 12px 24px; font-family: light;">
-            This is a computer-generated statement and does not require a signature.
-        </p>
     </div>
+    <!-- NO_TRANSACTION_FOUND no changes required -->
+    <p style='margin: 24px 24px 24px 48px; font-family: heavy;'>
+        No transactions found between ${start_date} and ${end_date}
+    </p>
+    <!-- COMPUTER_GENERATED no changes required -->
+    <p style="margin: -24px 0px 12px 48px; font-family: light;">
+        This is a computer-generated statement and does not require a signature.
+    </p>
+
     <!-- FOOTER_INVESTMENT_ACCOUNT -->
     <div style="clear: both; position: absolute; bottom: 0; font-family: light; width: 100%;">
-        <div style="display: flex; flex-direction: row; margin: 0px 24px;">
-            <p style="margin: 0px; text-align: right; width: fit-content;" class="balance_subbox">Page ${current_page}
-                of
-                ${total_pages}</p>
+        <div style="margin: 0px 24px;" class="floatedChilds">
+            <p style="float: right; width: fit-content;">
+                Page ${current_page} of ${total_pages}
+            </p>
         </div>
         <div style="background-color: #f4f9ff; padding: 12px 24px; width: 100%; margin-top: 12px;">
             <p style="margin: 8px 0px 0px 0px;">* Daily Earning is the earning on investment with our P2P NBFC Partner.

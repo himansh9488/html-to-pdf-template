@@ -49,16 +49,12 @@
 
         .symbol_box {
             height: 17px;
-            max-width: 17px;
+            width: 17px;
             font-size: 16px;
             border-radius: 100%;
             background-color: #2b80ff;
             color: #ffffff;
-            display: flex;
-            align-items: center;
             text-align: center;
-            justify-content: center;
-            margin: 4px 8px 0px 8px;
         }
 
         .balance_subbox {
@@ -118,50 +114,50 @@
             class="floatedChilds pos-rel">
             <div style="border-radius: 8px; background-color: #f4f9ff; padding: 47px 16px 24px 16px; width: 100%; box-sizing: border-box; font-family: light;"
                 class="floatedChilds">
-                <div class="balance_box">
+                <div style="width: 100%; overflow: hidden;">
                     <!-- OPENING_BALANCE -->
-                    <div style="text-align: center;" class="balance_subbox">
-                        <p style="font-size: 16; font-family: heavy; margin: 0;">
+                    <div style="float: left; text-align: center; width: 18%;">
+                        <p style="font-size: 12px; font-family: heavy; margin: 0;">
                             &#8377;<span>${opening_balance}</span>
                         </p>
                         <p style="margin: 8px 0px 0px 0px; font-family: light; font-size: 12px;">Opening Balance</p>
                     </div>
                     <!-- TOTAL_DEPOSIT -->
-                    <div class="symbol_box balance_subbox">
-                        <p style="margin: 0px 0px 2px 0px;">+</p>
+                    <div style="float: left; width: 2.5%; margin-top: 10px;">
+                        <p style="margin: 0px 0px 2px 0px;" class="symbol_box">+</p>
                     </div>
-                    <div style="text-align: center;" class="balance_subbox">
-                        <p style="font-size: 16; font-family: heavy; margin: 0;">
+                    <div style="float: left; text-align: center; width: 18%;">
+                        <p style="font-size: 12px; font-family: heavy; margin: 0;">
                             &#8377;<span>${total_deposits}</span>
                         </p>
                         <p style="margin: 8px 0px 0px 0px; font-family: light; font-size: 12px;">Deposits</p>
                     </div>
                     <!-- TOTAL_EARNINGS -->
-                    <div class="symbol_box balance_subbox">
-                        <p style="margin: 0px 0px 2px 0px;">+</p>
+                    <div style="float: left; width: 2.5%; margin-top: 10px;">
+                        <p style="margin: 0px 0px 2px 0px;" class="symbol_box">+</p>
                     </div>
-                    <div style="text-align: center;" class="balance_subbox">
-                        <p style="font-size: 16; font-family: heavy; margin: 0;">
+                    <div style="float: left; text-align: center; width: 18%;">
+                        <p style="font-size: 12px; font-family: heavy; margin: 0;">
                             &#8377;<span>${total_earnings}</span>
                         </p>
                         <p style="margin: 8px 0px 0px 0px; font-family: light; font-size: 12px;">Earnings</p>
                     </div>
                     <!-- WITH_DRAWLS -->
-                    <div class="symbol_box balance_subbox">
-                        <p style="margin: 0px 0px 2.5px 0px;">-</p>
+                    <div style="float: left; width: 2.5%; margin-top: 10px;">
+                        <p style="margin: 0px 0px 2.5px 0px;" class="symbol_box">-</p>
                     </div>
-                    <div style="text-align: center;" class="balance_subbox">
-                        <p style="font-size: 16; font-family: heavy; margin: 0;">
+                    <div style="float: left; text-align: center; width: 18%;">
+                        <p style="font-size: 12px; font-family: heavy; margin: 0;">
                             &#8377;<span>${total_withdrawals}</span>
                         </p>
                         <p style="margin: 8px 0px 0px 0px; font-family: light; font-size: 12px;">Withdrawals</p>
                     </div>
                     <!-- CLOSING_BALANCE -->
-                    <div class="symbol_box balance_subbox">
-                        <p style="margin: 0px 0px 3px 0px;">=</p>
+                    <div style="float: left; width: 2.5%; margin-top: 10px;">
+                        <p style="margin: 0px 0px 3px 0px;" class="symbol_box">=</p>
                     </div>
-                    <div style="text-align: center;" class="balance_subbox">
-                        <p style="font-size: 16; font-family: heavy; margin: 0; color: #02a758">
+                    <div style="float: left; text-align: center; width: 18%;">
+                        <p style="font-size: 12px; font-family: heavy; margin: 0; color: #02a758;">
                             &#8377;<span>${closing_balance}</span>
                         </p>
                         <p style="margin: 8px 0px 0px 0px; font-family: light; font-size: 12px;">Closing Balance</p>
@@ -169,7 +165,7 @@
                 </div>
             </div>
             <!-- ACCOUNT_SUMMARY -->
-            <div style="text-align: center; top: 0; width: 100%; box-sizing: border-box;" class="pos-abs z-index-1">
+            <div style="text-align: center; position: fixed; top: 256px; width: 100%; box-sizing: border-box;" class="z-index-1">
                 <div
                     style="margin: 0px auto; padding: 12px 24px; border-radius: 8px; background-color: #2b80ff; color: #ffffff; font-size: 22px; width: 25%; font-family: heavy;">
                     Account Summary
@@ -268,6 +264,7 @@
                     <td style="width: 13%; border-right: 1px solid #f4f9ff; font-family: light; border-bottom-right-radius: 8px;"
                         class="table_col_class table_bottom_border">&#8377;<span>${balance}</span>
                     </td>
+                </tr>
                 <!-- CLOSING_BALANCE_ROW -->
                 <tr class="table_row_border" ${even_row_background}>
                     <td style="width: 10%; border-right: 1px solid #f4f9ff; border-left: 1px solid #f4f9ff; border-bottom-left-radius: 8px; font-family: heavy;"
@@ -285,6 +282,7 @@
                     <td style="width: 13%; border-right: 1px solid #f4f9ff; font-family: heavy; border-bottom-right-radius: 8px;"
                         class="table_col_class table_bottom_border">&#8377;<span>${balance}</span>
                     </td>
+                </tr>
                 <!-- TABLE_END -->
             </tbody>
         </table>
@@ -298,13 +296,13 @@
     <p style="margin: -24px 0px 12px 48px; font-family: light;">
         This is a computer-generated statement and does not require a signature.
     </p>
-    <!-- FOOTER_BP_ACCOUNT -->
-    <div style="clear: both; position: absolute; bottom: 0; font-family: light; width: 100%;">
-        <div style="display: flex; flex-direction: row; margin: 0px 24px;">
-            <p style="margin: 0px; text-align: left; width: fit-content;" class="balance_subbox">
+    <!-- FOOTER_BP_ACCOUNT changes made -->
+    <div style="clear: both; position: fixed; bottom: 0; font-family: light; width: 100%;">
+        <div style="margin: 0px 24px;" class="floatedChilds">
+            <p style="float: left; margin: 0px; width: fit-content;">
                 Statement Date: <span class="font-heavy">${st_date}</span>
             </p>
-            <p style="margin: 0px; text-align: right; width: fit-content;" class="balance_subbox">
+            <p style="float: right; margin: 0px; width: fit-content;">
                 Page ${current_page} of ${total_pages}
             </p>
         </div>
