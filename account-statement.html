@@ -14,12 +14,22 @@
 
         @font-face {
             font-family: light;
-            src: url('/assets/ITCAvantGardePro-Bk.ttf');
+            src: url('https://d30gqtvesfc1d5.cloudfront.net/hubble/Central-Invoice/Font/Poppins-Light-1690540045000.ttf');
         }
 
         @font-face {
             font-family: heavy;
-            src: url('/assets//ITCAvantGardePro-Demi.ttf');
+            src: url('https://d30gqtvesfc1d5.cloudfront.net/hubble/Central-Invoice/Font/Poppins-Medium-1690541952973.ttf');
+        }
+
+        @font-face {
+            font-family: bold;
+            src: url('https://d30gqtvesfc1d5.cloudfront.net/hubble/Central-Invoice/Font/Poppins-Bold-1690780138989.ttf');
+        }
+
+        @font-face {
+            font-family: semiBold;
+            src: url('https://d30gqtvesfc1d5.cloudfront.net/hubble/Central-Invoice/Font/Poppins-SemiBold-1690541994014.ttf');
         }
 
         @page {
@@ -76,7 +86,7 @@
 </head>
 <!-- HEADER no changes required -->
 
-<body style='margin: 0px; padding: 0px; font-family: Helvetica; font-size: 12px; color: #1c1c1c; font-family: light;'>
+<body style='margin: 0px; padding: 0px; padding-bottom: 300px; font-family: Helvetica; font-size: 12px; color: #1c1c1c; font-family: light;'>
     <div style='padding: 20px 24px; background-color: #f4f9ff;' class='floatedChilds'>
         <img src='https://bharatpe-cdn.s3.ap-south-1.amazonaws.com/bp-logo.png' height='50px' width='180px'
             style='float: left; margin-top: 10px;' />
@@ -165,7 +175,7 @@
                 </div>
             </div>
             <!-- ACCOUNT_SUMMARY -->
-            <div style="text-align: center; position: fixed; top: 256px; width: 100%; box-sizing: border-box;" class="z-index-1">
+            <div style="text-align: center; position: absolute; top: 0; width: 100%; box-sizing: border-box;" class="z-index-1">
                 <div
                     style="margin: 0px auto; padding: 12px 24px; border-radius: 8px; background-color: #2b80ff; color: #ffffff; font-size: 22px; width: 25%; font-family: heavy;">
                     Account Summary
@@ -181,7 +191,7 @@
             style="clear: both; margin: 16px 0px 55px 0px; width: 100%; box-sizing: border-box; font-family: light; border-spacing: 0;">
             <thead>
                 <tr style="color: white; font-family: heavy; background-color: #2b80ff; color: #ffffff; font-size: 18px;">
-                    <th colspan="6" style="padding: 12px; border-top-left-radius: 8px; border-top-right-radius: 8px;">
+                    <th colspan="6" style="text-align: center; padding: 12px; border-top-left-radius: 8px; border-top-right-radius: 8px;">
                         ${table_header_text} Details
                     </th>
                 </tr>
@@ -189,13 +199,13 @@
             <!-- TABLE_COLUMNS -->
             <tbody>
                 <tr style="background-color: #f4f9ff;" class="table_row_border">
-                    <td style="width: 10%; border-right: 1px solid #ffffff;" class="table_col_class font-heavy">
+                    <td style="width: 12%; border-right: 1px solid #ffffff;" class="table_col_class font-heavy">
                         Date
                     </td>
-                    <td style="width: 21%; border-right: 1px solid #ffffff;" class="table_col_class font-heavy">
+                    <td style="width: 20%; border-right: 1px solid #ffffff;" class="table_col_class font-heavy">
                         Transaction Type
                     </td>
-                    <td style="width: 30%; border-right: 1px solid #ffffff;" class="table_col_class font-heavy">
+                    <td style="width: 29%; border-right: 1px solid #ffffff;" class="table_col_class font-heavy">
                         Particulars
                     </td>
                     <td style="width: 13%; border-right: 1px solid #ffffff;" class="table_col_class font-heavy">
@@ -209,14 +219,14 @@
                     </td>
                 </tr>
                 <!-- FIRST_ROW -->
-                <tr class="table_row_border" ${even_row_background}>
-                    <td style="width: 10%; border-right: 1px solid #f4f9ff; border-left: 1px solid #f4f9ff; font-family: heavy;"
+                <tr class="table_row_border">
+                    <td style="width: 12%; border-right: 1px solid #f4f9ff; border-left: 1px solid #f4f9ff; font-family: heavy;"
                         class="table_col_class">${date}
                     </td>
-                    <td style="width: 21%; border-right: 1px solid #f4f9ff; font-family: heavy;" class="table_col_class">
+                    <td style="width: 20%; border-right: 1px solid #f4f9ff; font-family: heavy;" class="table_col_class">
                         Opening Balance
                     </td>
-                    <td style="width: 30%; border-right: 1px solid #f4f9ff; font-family: heavy;" class="table_col_class"></td>
+                    <td style="width: 29%; border-right: 1px solid #f4f9ff; font-family: heavy;" class="table_col_class"></td>
                     <td style="width: 13%; border-right: 1px solid #f4f9ff; font-family: light;" class="table_col_class"></td>
                     <td style="width: 13%; border-right: 1px solid #f4f9ff; font-family: light;" class="table_col_class"></td>
                     <td style="width: 13%; border-right: 1px solid #f4f9ff; font-family: heavy;" class="table_col_class">
@@ -224,14 +234,14 @@
                     </td>
                 </tr>
                 <!-- TABLE_ROW -->
-                <tr class="table_row_border" ${even_row_background}>
-                    <td style="width: 10%; border-right: 1px solid #f4f9ff; border-left: 1px solid #f4f9ff; font-family: light;"
+                <tr class="table_row_border">
+                    <td style="width: 12%; border-right: 1px solid #f4f9ff; border-left: 1px solid #f4f9ff; font-family: light;"
                         class="table_col_class">${date}
                     </td>
-                    <td style="width: 21%; border-right: 1px solid #f4f9ff; font-family: light;" class="table_col_class">
+                    <td style="width: 20%; border-right: 1px solid #f4f9ff; font-family: light;" class="table_col_class">
                         ${transaction_type}
                     </td>
-                    <td style="width: 30%; border-right: 1px solid #f4f9ff; font-family: light;" class="table_col_class">
+                    <td style="width: 29%; border-right: 1px solid #f4f9ff; font-family: light;" class="table_col_class">
                         ${particulars}
                     </td>
                     <td style="width: 13%; border-right: 1px solid #f4f9ff; font-family: light;" class="table_col_class">
@@ -245,14 +255,14 @@
                     </td>
                 </tr>
                 <!-- LAST_ROW -->
-                <tr class="table_row_border" ${even_row_background}>
-                    <td style="width: 10%; border-right: 1px solid #f4f9ff; border-left: 1px solid #f4f9ff; border-bottom-left-radius: 8px; font-family: light;"
+                <tr class="table_row_border">
+                    <td style="width: 12%; border-right: 1px solid #f4f9ff; border-left: 1px solid #f4f9ff; border-bottom-left-radius: 8px; font-family: light;"
                         class="table_col_class table_bottom_border">${date}
                     </td>
-                    <td style="width: 21%; border-right: 1px solid #f4f9ff; font-family: light;"
+                    <td style="width: 20%; border-right: 1px solid #f4f9ff; font-family: light;"
                         class="table_col_class table_bottom_border">${transaction_type}
                     </td>
-                    <td style="width: 30%; border-right: 1px solid #f4f9ff; font-family: light;"
+                    <td style="width: 29%; border-right: 1px solid #f4f9ff; font-family: light;"
                         class="table_col_class table_bottom_border">${particulars}
                     </td>
                     <td style="width: 13%; border-right: 1px solid #f4f9ff; font-family: light;"
@@ -266,14 +276,14 @@
                     </td>
                 </tr>
                 <!-- CLOSING_BALANCE_ROW -->
-                <tr class="table_row_border" ${even_row_background}>
-                    <td style="width: 10%; border-right: 1px solid #f4f9ff; border-left: 1px solid #f4f9ff; border-bottom-left-radius: 8px; font-family: heavy;"
+                <tr class="table_row_border">
+                    <td style="width: 12%; border-right: 1px solid #f4f9ff; border-left: 1px solid #f4f9ff; border-bottom-left-radius: 8px; font-family: heavy;"
                         class="table_col_class table_bottom_border">${date}
                     </td>
-                    <td style="width: 21%; border-right: 1px solid #f4f9ff; font-family: heavy;"
+                    <td style="width: 20%; border-right: 1px solid #f4f9ff; font-family: heavy;"
                         class="table_col_class table_bottom_border">Closing Balance
                     </td>
-                    <td style="width: 30%; border-right: 1px solid #f4f9ff; font-family: heavy;"
+                    <td style="width: 29%; border-right: 1px solid #f4f9ff; font-family: heavy;"
                         class="table_col_class table_bottom_border"></td>
                     <td style="width: 13%; border-right: 1px solid #f4f9ff; font-family: light;"
                         class="table_col_class table_bottom_border"></td>
@@ -297,21 +307,23 @@
         This is a computer-generated statement and does not require a signature.
     </p>
     <!-- FOOTER_BP_ACCOUNT changes made -->
-    <div style="clear: both; position: fixed; bottom: 0; font-family: light; width: 100%;">
-        <div style="margin: 0px 24px;" class="floatedChilds">
-            <p style="float: left; margin: 0px; width: fit-content;">
-                Statement Date: <span class="font-heavy">${st_date}</span>
-            </p>
-            <p style="float: right; margin: 0px; width: fit-content;">
-                Page ${current_page} of ${total_pages}
-            </p>
+    <div style="position: absolute; bottom: 0; width: 100%;">
+        <div style="clear: both; font-family: light;">
+            <div style="margin: 0px 24px;" class="floatedChilds">
+                <p style="float: left; margin: 0px; width: fit-content;">
+                    Statement Date: <span class="font-heavy">${st_date}</span>
+                </p>
+                <p style="float: right; margin: 0px; width: fit-content;">
+                    Page ${current_page} of ${total_pages}
+                </p>
+            </div>
+            <div style="background-color: #f4f9ff; padding: 12px 24px; width: 100%; margin-top: 12px;">
+                <p style="margin: 8px 0px 0px 0px;">This document is confidential and may also be privileged.</p>
+            </div>
+            <div style="width: 100%; background-color: #ec6a5a; height: 4.5px;"></div>
+            <div style="width: 100%; background-color: #ffffff; height: 4.5px;"></div>
+            <div style="width: 100%; background-color: #007270; height: 4.5px;"></div>
         </div>
-        <div style="background-color: #f4f9ff; padding: 12px 24px; width: 100%; margin-top: 12px;">
-            <p style="margin: 8px 0px 0px 0px;">This document is confidential and may also be privileged.</p>
-        </div>
-        <div style="width: 100%; background-color: #ec6a5a; height: 4.5px;"></div>
-        <div style="width: 100%; background-color: #ffffff; height: 4.5px;"></div>
-        <div style="width: 100%; background-color: #007270; height: 4.5px;"></div>
     </div>
     <!-- BODY_END -->
 </body>
