@@ -14,18 +14,36 @@
 
         @font-face {
             font-family: light;
-            src: url('/assets/ITCAvantGardePro-Bk.ttf');
+            src: url('https://d30gqtvesfc1d5.cloudfront.net/hubble/Central-Invoice/Font/Poppins-Light-1690540045000.ttf');
         }
 
         @font-face {
             font-family: heavy;
-            src: url('/assets//ITCAvantGardePro-Demi.ttf');
+            src: url('https://d30gqtvesfc1d5.cloudfront.net/hubble/Central-Invoice/Font/Poppins-Medium-1690541952973.ttf');
+        }
+
+        @font-face {
+            font-family: bold;
+            src: url('https://d30gqtvesfc1d5.cloudfront.net/hubble/Central-Invoice/Font/Poppins-Bold-1690780138989.ttf');
+        }
+
+        @font-face {
+            font-family: semiBold;
+            src: url('https://d30gqtvesfc1d5.cloudfront.net/hubble/Central-Invoice/Font/Poppins-SemiBold-1690541994014.ttf');
         }
 
         @page {
             margin: 0px;
             size: 894px 1194px portrait;
-            padding: 0px;
+            margin-bottom: 176px;
+
+            @bottom-center {
+                content: element(footer);
+            }
+        }
+
+        #footer {
+            position: running(footer);
         }
 
         .pos-rel {
@@ -93,7 +111,7 @@
             <p style="margin: 5px"> Visit <span style="font-family: heavy">24x7 Chat Support</span> </p>
             <p style="margin: 5px"> in your <span style="font-family: heavy">BharatPe App</span> </p>
         </div> <img src="https://bharatpe-cdn.s3.ap-south-1.amazonaws.com/support_icon.png" height="24" width="24"
-            style="margin: 10 12px 18px 0; float: right" ; />
+            style="margin: 10 12px 18px 0; float: right" />
     </div>
     <!-- STATEMENT_PERIOD no changes required -->
     <div style="margin: 0px 24px;">
@@ -132,32 +150,33 @@
             <thead>
                 <tr
                     style="color: white; font-family: heavy; background-color: #2b80ff; color: #ffffff; font-size: 18px;">
-                    <th colspan="6" style="padding: 12px; border-top-left-radius: 8px; border-top-right-radius: 8px;">
+                    <th colspan="6"
+                        style="text-align: center; padding: 12px; border-top-left-radius: 8px; border-top-right-radius: 8px;">
                         ${table_header_text} Details</th>
                 </tr>
             </thead>
             <!-- P2P_TABLE_COLUMNS  -->
             <tbody>
                 <tr style="background-color: #f4f9ff;" class="table_row_border">
-                    <td style="width: 10%; border-right: 1px solid #ffffff;" class="table_col_class font-heavy">Date
+                    <td style="width: 13%; border-right: 1px solid #ffffff;" class="table_col_class font-heavy">Date
                     </td>
                     <td style="width: 19%; border-right: 1px solid #ffffff;" class="table_col_class font-heavy">Type
                     </td>
                     <td style="width: 17%; border-right: 1px solid #ffffff;" class="table_col_class font-heavy">
                         Investment
                     </td>
-                    <td style="width: 13%; border-right: 1px solid #ffffff;" class="table_col_class font-heavy">Daily
+                    <td style="width: 12%; border-right: 1px solid #ffffff;" class="table_col_class font-heavy">Daily
                         earning*
                     </td>
-                    <td style="width: 13%; border-right: 1px solid #ffffff;" class="table_col_class font-heavy">
+                    <td style="width: 12%; border-right: 1px solid #ffffff;" class="table_col_class font-heavy">
                         Cashback**
                     </td>
-                    <td style="width: 15%; border-right: 1px solid #ffffff;" class="table_col_class font-heavy">Total
+                    <td style="width: 14%; border-right: 1px solid #ffffff;" class="table_col_class font-heavy">Total
                     </td>
                 </tr>
                 <!-- P2P_TABLE_ROW -->
-                <tr class="table_row_border" ${even_row_background}>
-                    <td style="width: 10%; border-right: 1px solid #f4f9ff; border-left: 1px solid #f4f9ff; font-family: light;"
+                <tr class="table_row_border">
+                    <td style="width: 13%; border-right: 1px solid #f4f9ff; border-left: 1px solid #f4f9ff; font-family: light;"
                         class="table_col_class">${date}
                     </td>
                     <td style="width: 19%; border-right: 1px solid #f4f9ff; font-family: light;"
@@ -168,22 +187,22 @@
                         class="table_col_class">
                         ${principal}
                     </td>
-                    <td style="width: 13%; border-right: 1px solid #f4f9ff; font-family: light;"
+                    <td style="width: 12%; border-right: 1px solid #f4f9ff; font-family: light;"
                         class="table_col_class">
                         <span>${nbfc_interest}</span>
                     </td>
-                    <td style="width: 13%; border-right: 1px solid #f4f9ff; font-family: light;"
+                    <td style="width: 12%; border-right: 1px solid #f4f9ff; font-family: light;"
                         class="table_col_class">
                         <span>${cashback}</span>
                     </td>
-                    <td style="width: 15%; border-right: 1px solid #f4f9ff; font-family: light;"
+                    <td style="width: 14%; border-right: 1px solid #f4f9ff; font-family: light;"
                         class="table_col_class">
                         <span>${interest}</span>
                     </td>
                 </tr>
                 <!-- P2P_LAST_ROW -->
-                <tr class="table_row_border" ${even_row_background}>
-                    <td style="width: 10%; border-right: 1px solid #f4f9ff; border-left: 1px solid #f4f9ff; border-bottom-left-radius: 8px; font-family: light;"
+                <tr class="table_row_border">
+                    <td style="width: 13%; border-right: 1px solid #f4f9ff; border-left: 1px solid #f4f9ff; border-bottom-left-radius: 8px; font-family: light;"
                         class="table_col_class table_bottom_border">${date}
                     </td>
                     <td style="width: 19%; border-right: 1px solid #f4f9ff; font-family: light;"
@@ -192,40 +211,46 @@
                     <td style="width: 17%; border-right: 1px solid #f4f9ff; font-family: light;"
                         class="table_col_class table_bottom_border">${principal}
                     </td>
-                    <td style="width: 13%; border-right: 1px solid #f4f9ff; font-family: light;"
+                    <td style="width: 12%; border-right: 1px solid #f4f9ff; font-family: light;"
                         class="table_col_class table_bottom_border"><span>${nbfc_interest}</span>
                     </td>
-                    <td style="width: 13%; border-right: 1px solid #f4f9ff; font-family: light; border-bottom-right-radius: 8px;"
+                    <td style="width: 12%; border-right: 1px solid #f4f9ff; font-family: light; border-bottom-right-radius: 8px;"
                         class="table_col_class table_bottom_border"><span>${cashback}</span>
                     </td>
-                    <td style="width: 15%; border-right: 1px solid #f4f9ff; font-family: light;"
+                    <td style="width: 14%; border-right: 1px solid #f4f9ff; font-family: light;"
                         class="table_col_class table_bottom_border"><span>${interest}</span>
                     </td>
                 </tr>
-                    <!-- TABLE_END -->
+                <!-- TABLE_END -->
             </tbody>
         </table>
     </div>
+    <!-- NO_TRANSACTION_FOUND no changes required -->
+    <p style='margin: 24px 24px 24px 48px; font-family: heavy;'>
+        No transactions found between ${start_date} and ${end_date}
+    </p>
     <!-- COMPUTER_GENERATED no changes required -->
     <p style="margin: -24px 0px 12px 48px; font-family: light;">
         This is a computer-generated statement and does not require a signature.
     </p>
     <!-- FOOTER_INVESTMENT_ACCOUNT -->
-    <div style="clear: both; position: absolute; bottom: 0; font-family: light; width: 100%;">
-        <div style="margin: 0px 24px;" class="floatedChilds">
-            <p style="float: right; width: fit-content;">
-                Page ${current_page} of ${total_pages}
-            </p>
+    <div id="footer">
+        <div style="font-family: light; width: 100%; clear: both;">
+            <div style="margin: 0px 24px;" class="floatedChilds">
+                <p style="float: right; width: fit-content;">
+                    Page ${current_page} of ${total_pages}
+                </p>
+            </div>
+            <div style="background-color: #f4f9ff; padding: 12px 24px; width: 100%; margin-top: 12px;">
+                <p style="margin: 8px 0px 0px 0px;">* Daily Earning is the earning on investment with our P2P NBFC Partner.
+                </p>
+                <p style="margin: 8px 0px 0px 0px;">** Cashback is platform cashback.</p>
+                <p style="margin: 8px 0px 0px 0px;">This document is confidential and may also be privileged.</p>
+            </div>
+            <div style="width: 100%; background-color: #ec6a5a; height: 4.5px;"></div>
+            <div style="width: 100%; background-color: #ffffff; height: 4.5px;"></div>
+            <div style="width: 100%; background-color: #007270; height: 4.5px;"></div>
         </div>
-        <div style="background-color: #f4f9ff; padding: 12px 24px; width: 100%; margin-top: 12px;">
-            <p style="margin: 8px 0px 0px 0px;">* Daily Earning is the earning on investment with our P2P NBFC Partner.
-            </p>
-            <p style="margin: 8px 0px 0px 0px;">** Cashback is platform cashback.</p>
-            <p style="margin: 8px 0px 0px 0px;">This document is confidential and may also be privileged.</p>
-        </div>
-        <div style="width: 100%; background-color: #ec6a5a; height: 4.5px;"></div>
-        <div style="width: 100%; background-color: #ffffff; height: 4.5px;"></div>
-        <div style="width: 100%; background-color: #007270; height: 4.5px;"></div>
     </div>
     <!-- BODY_END -->
 </body>
