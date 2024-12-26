@@ -33,17 +33,19 @@
         }
 
         @page {
-            margin: 0px;
-            size: 894px 1194px portrait;
-            margin-bottom: 176px;
-
-            @bottom-center {
-                content: element(footer);
-            }
+            margin: 5px 0px 0px 0px;
+            size: 894px 1194px;
         }
 
-        #footer {
-            position: running(footer);
+        table {
+            -fs-table-paginate: paginate;
+            -fs-page-break-min-height: 170px;
+        }
+
+        tr,
+        thead,
+        tfoot {
+            page-break-inside: avoid;
         }
 
         .pos-rel {
@@ -234,8 +236,8 @@
         This is a computer-generated statement and does not require a signature.
     </p>
     <!-- FOOTER_INVESTMENT_ACCOUNT -->
-    <div id="footer">
-        <div style="font-family: light; width: 100%; clear: both;">
+    <div style="position: fixed; bottom: 0; width: 100%;">
+        <div style="font-family: light; width: 100%;">
             <div style="margin: 0px 24px;" class="floatedChilds">
                 <p style="float: right; width: fit-content;">
                     Page ${current_page} of ${total_pages}
