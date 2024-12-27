@@ -48,6 +48,14 @@
             page-break-inside: avoid;
         }
 
+        #pagenumber:before {
+            content: counter(page);
+        }
+
+        #pagecount:before {
+            content: counter(pages);
+        }
+
         .pos-rel {
             position: relative;
         }
@@ -179,26 +187,26 @@
                 <!-- P2P_TABLE_ROW -->
                 <tr class="table_row_border">
                     <td style="width: 13%; border-right: 1px solid #f4f9ff; border-left: 1px solid #f4f9ff; font-family: light;"
-                        class="table_col_class">${date}
+                        class="table_col_class table_bottom_border">${date}
                     </td>
                     <td style="width: 19%; border-right: 1px solid #f4f9ff; font-family: light;"
-                        class="table_col_class">
+                        class="table_col_class table_bottom_border">
                         ${transaction_type}
                     </td>
                     <td style="width: 17%; border-right: 1px solid #f4f9ff; font-family: light;"
-                        class="table_col_class">
+                        class="table_col_class table_bottom_border">
                         ${principal}
                     </td>
                     <td style="width: 12%; border-right: 1px solid #f4f9ff; font-family: light;"
-                        class="table_col_class">
+                        class="table_col_class table_bottom_border">
                         <span>${nbfc_interest}</span>
                     </td>
                     <td style="width: 12%; border-right: 1px solid #f4f9ff; font-family: light;"
-                        class="table_col_class">
+                        class="table_col_class table_bottom_border">
                         <span>${cashback}</span>
                     </td>
                     <td style="width: 14%; border-right: 1px solid #f4f9ff; font-family: light;"
-                        class="table_col_class">
+                        class="table_col_class table_bottom_border">
                         <span>${interest}</span>
                     </td>
                 </tr>
@@ -240,7 +248,7 @@
         <div style="font-family: light; width: 100%;">
             <div style="margin: 0px 24px;" class="floatedChilds">
                 <p style="float: right; width: fit-content;">
-                    Page ${current_page} of ${total_pages}
+                    Page <span id="pagenumber"></span> of <span id="pagecount"></span>
                 </p>
             </div>
             <div style="background-color: #f4f9ff; padding: 12px 24px; width: 100%; margin-top: 12px;">
